@@ -1,0 +1,14 @@
+{
+  "customSyntax": "postcss-styled-syntax",
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/order": ["custom-properties", "dollar-variables", "declarations", "rules", "at-rules"],
+    "order/properties-alphabetical-order": true,
+    "unit-allowed-list": ["rem", "vw", "vh", "%", "fr", "s", "ms", "deg"],
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "at-rule-empty-line-before": "always",
+    "rule-empty-line-before": "always"
+  }
+}
