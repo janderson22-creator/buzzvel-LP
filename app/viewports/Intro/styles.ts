@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mqTabletAndMobile } from '../../global-style';
+import { mqMobile, mqTablet } from '../../global-style';
 
 export const Container = styled.div`
   display: flex;
@@ -8,9 +8,14 @@ export const Container = styled.div`
   padding-left: 5rem;
   position: relative;
 
-  ${mqTabletAndMobile} {
+  ${mqMobile} {
     padding: 0;
     padding-top: 20rem;
+  }
+
+  ${mqTablet} {
+    padding: 0.8rem;
+    padding-top: 1rem;
   }
 
   .employee-image {
@@ -21,10 +26,16 @@ export const Container = styled.div`
     width: 34rem;
     z-index: 0;
 
-    ${mqTabletAndMobile} {
+    ${mqMobile} {
       height: 25rem;
       object-fit: contain;
       width: 18rem;
+    }
+
+    ${mqTablet} {
+      height: 25rem;
+      object-fit: contain;
+      width: 20rem;
     }
   }
 
@@ -40,7 +51,7 @@ export const Infos = styled.div`
   flex-direction: column;
   gap: 1.4rem;
 
-  ${mqTabletAndMobile} {
+  ${mqMobile} {
     align-items: center;
     padding: 0 1rem;
   }
@@ -48,21 +59,31 @@ export const Infos = styled.div`
   .title {
     font-size: 4.5rem;
 
-    ${mqTabletAndMobile} {
+    ${mqMobile} {
       font-size: 2.5rem;
       font-weight: 700;
       text-align: center;
     }
+
+    ${mqTablet} {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
   }
 
   .description {
-    ${mqTabletAndMobile} {
+    ${mqMobile} {
       line-height: 1.7rem;
       text-align: center;
 
       br {
         display: none;
       }
+    }
+
+    ${mqTablet} {
+      line-height: 1.5rem;
+      width: 60%;
     }
   }
 `;
@@ -73,15 +94,19 @@ export const Comment = styled.div`
   gap: 1rem;
   margin-top: 10rem;
 
-  ${mqTabletAndMobile} {
+  ${mqMobile} {
     margin-top: 4rem;
+  }
+
+  ${mqTablet} {
+    margin-top: 3rem;
   }
 
   .message {
     color: var(txt-0);
     font-size: 1.1rem;
 
-    ${mqTabletAndMobile} {
+    ${mqMobile} {
       text-align: left;
 
       br {
