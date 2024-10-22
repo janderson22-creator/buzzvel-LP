@@ -2,17 +2,16 @@
 
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Text } from '../Text';
 import { ArrowRight } from './arrowRight';
 
 const theme = {
   primary: {
-    color: '#581C87',
-    hoverTextColor: '#FCD34D',
+    color: 'var(--primary-color)',
+    hoverTextColor: 'var(--secondary-color)',
   },
   secondary: {
-    color: '#FCD34D',
-    hoverTextColor: '#78350F',
+    color: 'var(--secondary-color)',
+    hoverTextColor: 'var(--tertiary-color)',
   },
 };
 
@@ -25,6 +24,7 @@ const ButtonContain = styled.button<{ $variant: 'primary' | 'secondary' }>`
   cursor: pointer;
   display: flex;
   gap: 0.8rem;
+  max-width: 15rem;
   padding: 1rem 1.6rem;
   transition: all 0.4s ease-in-out;
 
@@ -36,7 +36,7 @@ const ButtonContain = styled.button<{ $variant: 'primary' | 'secondary' }>`
   }
 `;
 
-const Request = styled(Text)`
+const Request = styled.span`
   font-size: 1.2rem;
   font-weight: 700;
 `;
