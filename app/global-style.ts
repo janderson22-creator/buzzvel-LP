@@ -8,6 +8,13 @@ export const mqTabletAndMobile = '@media (max-width: 992px)';
 const styled = { createGlobalStyle }; // To fix by Prettier
 
 export const GlobalStyle = styled.createGlobalStyle`
+  :root {
+    --txt-0: #0f172a;
+    --primary-color: #581c87;
+    --secondary-color: #fcd34d;
+    --tertiary-color: #78350f;
+  }
+
   * {
     box-sizing: border-box;
     line-height: 1;

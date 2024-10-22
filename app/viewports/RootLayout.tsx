@@ -4,6 +4,7 @@ import { Roboto } from 'next/font/google';
 import styled from 'styled-components';
 import { GlobalStyle, mqMobile } from '../global-style';
 import { Header } from './Header';
+import { Intro } from './Intro';
 
 export const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
@@ -20,7 +21,6 @@ const Body = styled.body`
 
 const PageContainer = styled.div`
   overflow: hidden auto;
-  padding: 3rem;
 
   ${mqMobile} {
     padding: 1.1rem;
@@ -33,6 +33,7 @@ export const RootLayout = ({ children }: any) => {
       <Body>
         <GlobalStyle />
         <Header />
+        <Intro />
         <PageContainer>{children}</PageContainer>
       </Body>
     </Html>

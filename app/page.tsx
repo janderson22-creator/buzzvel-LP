@@ -1,5 +1,3 @@
-const Home = () => {
-  return <h1>Welcome to Buzzvel Landing Pages.</h1>;
-};
+const Home = () => {};
 
 export default Home;
