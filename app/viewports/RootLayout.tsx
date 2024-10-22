@@ -3,6 +3,7 @@
 import { Roboto } from 'next/font/google';
 import styled from 'styled-components';
 import { GlobalStyle, mqMobile } from '../global-style';
+import { Header } from './Header';
 
 export const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
@@ -31,6 +32,7 @@ export const RootLayout = ({ children }: any) => {
     <Html lang="pt" className={roboto.className}>
       <Body>
         <GlobalStyle />
+        <Header />
         <PageContainer>{children}</PageContainer>
       </Body>
     </Html>
