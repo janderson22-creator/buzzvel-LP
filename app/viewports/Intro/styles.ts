@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +8,11 @@ export const Container = styled.div`
   padding-left: 5rem;
   position: relative;
 
+  ${mqTabletAndMobile} {
+    padding: 0;
+    padding-top: 20rem;
+  }
+
   .employee-image {
     height: 34rem;
     position: absolute;
@@ -14,6 +20,12 @@ export const Container = styled.div`
     top: -6.5rem;
     width: 34rem;
     z-index: 0;
+
+    ${mqTabletAndMobile} {
+      height: 25rem;
+      object-fit: contain;
+      width: 18rem;
+    }
   }
 
   .woman-image {
@@ -27,6 +39,32 @@ export const Infos = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+
+  ${mqTabletAndMobile} {
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 4.5rem;
+
+    ${mqTabletAndMobile} {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  .description {
+    ${mqTabletAndMobile} {
+      line-height: 1.7rem;
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const Comment = styled.div`
@@ -35,9 +73,21 @@ export const Comment = styled.div`
   gap: 1rem;
   margin-top: 10rem;
 
+  ${mqTabletAndMobile} {
+    margin-top: 4rem;
+  }
+
   .message {
     color: var(txt-0);
     font-size: 1.1rem;
+
+    ${mqTabletAndMobile} {
+      text-align: left;
+
+      br {
+        display: none;
+      }
+    }
   }
 `;
 

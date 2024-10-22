@@ -7,6 +7,10 @@ export const ContainHeader = styled.header`
   justify-content: space-between;
   padding: 1.5rem 5rem;
   z-index: 1;
+
+  ${mqTabletAndMobile} {
+    padding: 0.8rem 1rem;
+  }
 `;
 
 export const CompanyName = styled.span`

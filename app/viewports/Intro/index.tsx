@@ -10,10 +10,10 @@ import * as S from './styles';
 export const Intro = () => (
   <S.Container>
     <S.Infos>
-      <Title fontSize="4.5rem">
+      <Title className="title">
         Get the Sun to <br /> Power Your Home
       </Title>
-      <Description>
+      <Description className="description">
         Viverra viverra nibh enim et aliquam, enim. Tempor, sit <br /> mus viverra orci dui
         consequat turpis scelerisque.
       </Description>
