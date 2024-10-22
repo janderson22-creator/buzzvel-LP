@@ -22,6 +22,11 @@ export const GlobalStyle = styled.createGlobalStyle`
     /* 1.1713vw = (16 / 1366).toFixed(6) * 100 */
     font-size: 1.1713vw;
 
+    a {
+      color: unset;
+      text-decoration: none;
+    }
+
     ${mqMobile} {
       /* 4.4444vw = (16 / 360).toFixed(6) * 100 */
       font-size: 4.4444vw;
