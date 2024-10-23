@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { Button } from '../../components/Button';
+import { Image } from '../../components/Image';
 import * as S from './styles';
 
 export const Header = () => (
@@ -25,7 +25,7 @@ export const Header = () => (
     </S.ContainNav>
 
     <S.Support>
-      <Image src="icons/headset.svg" alt="support" width={24} height={24} />
+      <Image src="icons/headset.svg" className="headset" alt="support" />
       <S.SupportNumber>
         <a href="tel:+555818282">555 818 282</a>
       </S.SupportNumber>

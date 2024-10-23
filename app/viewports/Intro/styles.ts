@@ -72,6 +72,8 @@ export const Infos = styled.div`
   }
 
   .description {
+    text-align: left;
+
     ${mqMobile} {
       text-align: center;
 

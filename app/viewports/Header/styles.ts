@@ -58,6 +58,11 @@ export const Support = styled.div`
   ${mqTabletAndMobile} {
     display: none;
   }
+
+  .headset {
+    height: 1.4rem;
+    width: 1.4rem;
+  }
 `;
 
 export const SupportNumber = styled.span`

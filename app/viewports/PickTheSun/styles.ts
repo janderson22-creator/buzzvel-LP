@@ -5,11 +5,13 @@ export const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20rem;
   padding-bottom: 30rem;
   padding-top: 5rem;
   position: relative;
 
   ${mqTabletAndMobile} {
+    margin-bottom: 15rem;
     padding-bottom: 4.4rem;
   }
 
