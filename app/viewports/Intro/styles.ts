@@ -73,7 +73,6 @@ export const Infos = styled.div`
 
   .description {
     ${mqMobile} {
-      line-height: 1.7rem;
       text-align: center;
 
       br {

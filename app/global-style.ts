@@ -13,6 +13,7 @@ export const GlobalStyle = styled.createGlobalStyle`
     --primary-color: #581c87;
     --secondary-color: #fcd34d;
     --tertiary-color: #78350f;
+    --quaternary-color: #d97706;
   }
 
   * {

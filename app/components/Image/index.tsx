@@ -11,8 +11,8 @@ export const Image = ({ src, className, alt }: Props) => (
     src={src}
     className={className}
     alt={alt}
-    width={0}
-    height={0}
+    width={50}
+    height={50}
     sizes="100vw"
     quality={100}
     priority

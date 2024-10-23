@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { GlobalStyle, mqMobile } from '../global-style';
 import { Header } from './Header';
 import { Intro } from './Intro';
+import { PickTheSun } from './PickTheSun';
 
 export const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
@@ -34,6 +35,7 @@ export const RootLayout = ({ children }: any) => {
         <GlobalStyle />
         <Header />
         <Intro />
+        <PickTheSun />
         <PageContainer>{children}</PageContainer>
       </Body>
     </Html>

@@ -6,6 +6,7 @@ const Txt = styled.h3`
   color: var(txt-0);
   font-size: 1.2rem;
   font-weight: 400;
+  line-height: 1.7rem;
 `;
 
 type Props = {
