@@ -7,7 +7,7 @@ import { Header } from './Header';
 import { Intro } from './Intro';
 import { PickTheSun } from './PickTheSun';
 
-export const roboto = Roboto({ subsets: ['latin'], weight: '400' });
+export const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700', '900'] });
 
 const Html = styled.html`
   height: 100%;

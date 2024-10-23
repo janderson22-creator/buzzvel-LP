@@ -26,7 +26,7 @@ export const Intro = () => (
           consequat turpis scelerisque faucibus.”
         </Text>
         <S.Profile>
-          <Image src="/woman-profile.png" className="woman-image" alt="employee-working" />
+          <Image src="/woman-profile.webp" className="woman-image" alt="employee-working" />
           <S.UserInfos>
             <Text tag="span">Rwanda Melflor</Text>
             <Text tag="span" className="link">
@@ -36,6 +36,6 @@ export const Intro = () => (
         </S.Profile>
       </S.Comment>
     </S.Infos>
-    <Image src="/employee.png" className="employee-image" alt="employee-working" />
+    <Image src="/employee.webp" className="employee-image" alt="employee-working" />
   </S.Container>
 );
