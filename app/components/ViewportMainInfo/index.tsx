@@ -7,18 +7,19 @@ import { Title } from '../Title';
 const Infos = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
 
   ${mqTabletAndMobile} {
     padding: 0 1rem;
   }
 `;
 
-const Header = styled.div`
+const Header = styled.div<{ alignItems: string }>`
+  align-items: ${({ alignItems }) => alignItems};
+  display: flex;
+  flex-direction: column;
+
   ${mqTabletAndMobile} {
     align-items: center;
-    display: flex;
-    flex-direction: column;
   }
 
   .text {
@@ -42,6 +43,13 @@ const Header = styled.div`
   }
 
   .description {
+    line-height: 2.2rem;
+    text-align: ${({ alignItems }) => alignItems};
+
+    .align-items {
+      text-align: center;
+    }
+
     ${mqTabletAndMobile} {
       text-align: center;
     }
@@ -80,29 +88,38 @@ const GridItem = styled.div`
 `;
 
 type Props = {
-  topic: string;
+  topic?: string;
   title: string;
   description: string;
-  data: { title: string; subtitle: string }[];
+  data?: { title: string; subtitle: string }[];
+  alignItems?: 'center' | 'left';
 };
 
-export const GeneralInfos = ({ topic, title, description, data }: Props) => (
+export const ViewPortMainInfo = ({
+  topic,
+  title,
+  description,
+  data,
+  alignItems = 'left',
+}: Props) => (
   <Infos>
-    <Header>
-      <Text className="text">{topic}</Text>
+    <Header alignItems={alignItems}>
+      {topic && <Text className="text">{topic}</Text>}
       <Title className="title">{title}</Title>
       <Description className="description">{description}</Description>
     </Header>
 
-    <Grid>
-      {data.map((item) => (
-        <GridItem key={item.title}>
-          <Text>
-            <strong>{item.title}</strong>
-          </Text>
-          <Text tag="p">{item.subtitle}</Text>
-        </GridItem>
-      ))}
-    </Grid>
+    {data && (
+      <Grid>
+        {data.map((item) => (
+          <GridItem key={item.title}>
+            <Text>
+              <strong>{item.title}</strong>
+            </Text>
+            <Text tag="p">{item.subtitle}</Text>
+          </GridItem>
+        ))}
+      </Grid>
+    )}
   </Infos>
 );

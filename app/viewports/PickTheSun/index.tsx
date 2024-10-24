@@ -1,17 +1,18 @@
-import { Description } from '../../components/Description';
 import { Image } from '../../components/Image';
-import Text from '../../components/Text';
-import { Title } from '../../components/Title';
+import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import * as S from './styles';
 
 export const PickTheSun = () => (
   <S.Container>
-    <Text className="text">No more waste</Text>
-    <Title className="title">Pick the Sun</Title>
-    <Description className="description">
-      Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis
-      pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin.
-    </Description>
+    <S.Infos>
+      <ViewPortMainInfo
+        topic="No more waste"
+        title="Pick the Sun"
+        description="Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis
+        pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin."
+        alignItems="center"
+      />
+    </S.Infos>
 
     <div className="orange-ball" />
     <div className="purple-ball" />

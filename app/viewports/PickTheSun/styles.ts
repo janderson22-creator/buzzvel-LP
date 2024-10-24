@@ -15,36 +15,6 @@ export const Container = styled.div`
     padding-bottom: 4.4rem;
   }
 
-  .text {
-    color: var(--quaternary-color);
-    font-size: 1.2rem;
-    font-weight: 500;
-
-    ${mqTabletAndMobile} {
-      font-size: 1rem;
-    }
-  }
-
-  .title {
-    font-size: 3.5rem;
-    margin-bottom: 1.3rem;
-    margin-top: 0.5rem;
-
-    ${mqTabletAndMobile} {
-      font-size: 2rem;
-    }
-  }
-
-  .description {
-    padding: 0 15rem;
-    text-align: center;
-
-    ${mqTabletAndMobile} {
-      padding: 0 1rem;
-      z-index: 1;
-    }
-  }
-
   .orange-ball {
     background: #f59e0b;
     border-radius: 100%;
@@ -120,5 +90,13 @@ export const Container = styled.div`
       right: 0;
       width: 22rem;
     }
+  }
+`;
+
+export const Infos = styled.div`
+  padding: 0 15rem;
+
+  ${mqTabletAndMobile} {
+    padding: 0;
   }
 `;

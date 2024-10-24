@@ -51,3 +51,7 @@ export const Icons = styled.div`
     }
   }
 `;
+
+export const Infos = styled.div`
+  margin-top: 3rem;
+`;

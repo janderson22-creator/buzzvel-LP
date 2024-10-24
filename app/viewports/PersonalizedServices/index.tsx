@@ -1,6 +1,6 @@
-import { GeneralInfos } from '../../components/GeneralInfos';
 import { Image } from '../../components/Image';
-import { powerfulFeatures } from '../../mock';
+import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
+import { powerfulFeatures } from '../../data/mock';
 import * as S from './styles';
 
 export const PersonalizedServices = () => (
@@ -14,11 +14,13 @@ export const PersonalizedServices = () => (
       />
     </S.Icons>
 
-    <GeneralInfos
-      topic="Services"
-      title="Personalized services"
-      description="Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit."
-      data={powerfulFeatures}
-    />
+    <S.Infos>
+      <ViewPortMainInfo
+        topic="Services"
+        title="Personalized services"
+        description="Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit."
+        data={powerfulFeatures}
+      />
+    </S.Infos>
   </S.Container>
 );
