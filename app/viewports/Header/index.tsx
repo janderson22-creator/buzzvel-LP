@@ -9,16 +9,16 @@ export const Header = () => (
       <S.Nav>
         <S.NavList>
           <S.NavItem>
-            <S.NavLink href="#products">Products</S.NavLink>
+            <a href="#products">Products</a>
           </S.NavItem>
           <S.NavItem>
-            <S.NavLink href="#solutions">Solutions</S.NavLink>
+            <a href="#solutions">Solutions</a>
           </S.NavItem>
           <S.NavItem>
-            <S.NavLink href="#services">Services</S.NavLink>
+            <a href="#services">Services</a>
           </S.NavItem>
           <S.NavItem>
-            <S.NavLink href="#configure">Configure</S.NavLink>
+            <a href="#configure">Configure</a>
           </S.NavItem>
         </S.NavList>
       </S.Nav>

@@ -7,6 +7,7 @@ import { Header } from './Header';
 import { Intro } from './Intro';
 import { PersonalizedServices } from './PersonalizedServices';
 import { PickTheSun } from './PickTheSun';
+import { PowerfulFeatures } from './PowerfulFeatures';
 
 export const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700', '900'] });
 
@@ -38,6 +39,7 @@ export const RootLayout = ({ children }: any) => {
         <Intro />
         <PickTheSun />
         <PersonalizedServices />
+        <PowerfulFeatures />
         <PageContainer>{children}</PageContainer>
       </Body>
     </Html>

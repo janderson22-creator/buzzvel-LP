@@ -46,11 +46,6 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a`
-  color: unset;
-  font-weight: 500;
-`;
-
 export const Support = styled.div`
   align-items: center;
   display: flex;

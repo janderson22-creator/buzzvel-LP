@@ -93,7 +93,7 @@ export const Comment = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
 
   ${mqMobile} {
     margin-top: 4rem;
@@ -104,7 +104,6 @@ export const Comment = styled.div`
   }
 
   .message {
-    color: var(txt-0);
     font-size: 1.1rem;
 
     ${mqMobile} {

@@ -45,6 +45,27 @@ export const GlobalStyle = styled.createGlobalStyle`
     }
   }
 
+  ${mqDesktop} {
+    /* stylelint-disable-next-line rule-empty-line-before */
+    ::-webkit-scrollbar {
+      height: 0.4rem;
+      width: 0.4rem;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+      background: rgba(128, 128, 128, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(128, 128, 128, 0.7);
+      border-radius: var(--border-radius);
+
+      &:hover {
+        background: rgba(128, 128, 128, 1);
+      }
+    }
+  }
+
   body {
     max-width: 100vw;
     overflow-x: hidden;

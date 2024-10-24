@@ -8,6 +8,10 @@ const Infos = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+
+  ${mqTabletAndMobile} {
+    padding: 0 1rem;
+  }
 `;
 
 const Header = styled.div`
