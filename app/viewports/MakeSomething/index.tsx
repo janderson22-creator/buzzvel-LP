@@ -3,11 +3,13 @@ import { Button } from '../../components/Button';
 import { Description } from '../../components/Description';
 import Text from '../../components/Text';
 import { Title } from '../../components/Title';
+import { SliderContain } from './slider';
 
 const Container = styled.div`
   background: #581c87;
   margin-top: 8rem;
   padding: 5rem 0;
+  padding-bottom: 10rem;
   padding-left: 5rem;
 
   .text {
@@ -53,5 +55,7 @@ export const MakeSomething = () => (
 
       <Button $variant="secondary" />
     </Header>
+
+    <SliderContain />
   </Container>
 );

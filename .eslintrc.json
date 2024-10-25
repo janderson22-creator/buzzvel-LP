@@ -10,6 +10,7 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "react/jsx-props-no-spreading": "off",
     "no-console": "error",
     "no-alert": "error",
     "react/require-default-props": "off",
