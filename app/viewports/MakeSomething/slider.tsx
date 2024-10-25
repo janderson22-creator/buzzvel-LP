@@ -7,6 +7,12 @@ import { testimonials } from '../../data/mock';
 import { mqTabletAndMobile } from '../../global-style';
 
 const Container = styled.div`
+  padding-left: 3rem;
+
+  ${mqTabletAndMobile} {
+    padding-left: 0;
+  }
+
   .slider-container {
     margin-top: 6.5rem;
 
@@ -39,7 +45,7 @@ const Container = styled.div`
 const Card = styled.div`
   background: #fff;
   border-radius: 0.6rem;
-  margin-left: 1.2rem;
+  margin-left: 1.6rem;
   max-width: 21rem;
   min-width: 21rem;
   padding: 2rem;
@@ -104,23 +110,24 @@ const ArrowWrapper = styled.div`
   z-index: 2;
 
   ${mqTabletAndMobile} {
-    bottom: -8rem;
+    bottom: -6rem;
     left: 0;
     margin: auto;
     right: 0;
   }
 
   &.left {
-    left: 0;
+    left: 1.3rem;
     top: unset;
 
     ${mqTabletAndMobile} {
+      left: 0;
       right: 4rem;
     }
   }
 
   &.right {
-    left: 4rem;
+    left: 5.3rem;
     right: unset;
     top: unset;
 

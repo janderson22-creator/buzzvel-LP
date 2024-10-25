@@ -13,8 +13,8 @@ const Infos = styled.div`
   }
 `;
 
-const Header = styled.div<{ $alignitems: string }>`
-  align-items: ${({ $alignitems }) => $alignitems};
+const Header = styled.div<{ $topicColor: 'yellow' | 'brown'; $alignItems: string }>`
+  align-items: ${({ $alignItems }) => $alignItems};
   display: flex;
   flex-direction: column;
 
@@ -23,7 +23,8 @@ const Header = styled.div<{ $alignitems: string }>`
   }
 
   .text {
-    color: var(--quaternary-color);
+    color: ${({ $topicColor }) =>
+      $topicColor === 'yellow' ? '#fcd34d' : 'var(--quaternary-color)'};
     font-size: 1.2rem;
     font-weight: 500;
 
@@ -44,7 +45,7 @@ const Header = styled.div<{ $alignitems: string }>`
 
   .description {
     line-height: 2.2rem;
-    text-align: ${({ $alignitems }) => $alignitems};
+    text-align: ${({ $alignItems }) => $alignItems};
 
     .align-items {
       text-align: center;
@@ -89,24 +90,26 @@ const GridItem = styled.div`
 
 type Props = {
   topic?: string;
+  topicColor?: 'yellow' | 'brown';
   title: string;
-  description: string;
+  description?: string;
   data?: { title: string; subtitle: string }[];
-  $alignitems?: 'center' | 'left';
+  alignItems?: 'center' | 'left';
 };
 
 export const ViewPortMainInfo = ({
   topic,
+  topicColor = 'brown',
   title,
   description,
   data,
-  $alignitems = 'left',
+  alignItems = 'left',
 }: Props) => (
   <Infos>
-    <Header $alignitems={$alignitems}>
+    <Header $topicColor={topicColor} $alignItems={alignItems}>
       {topic && <Text className="text">{topic}</Text>}
       <Title className="title">{title}</Title>
-      <Description className="description">{description}</Description>
+      {description && <Description className="description">{description}</Description>}
     </Header>
 
     {data && (

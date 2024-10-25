@@ -9,7 +9,7 @@ const Container = styled.div`
   margin-top: 8rem;
   padding: 5rem 0;
   padding-bottom: 10rem;
-  padding-left: 5rem;
+  z-index: 2;
 
   ${mqTabletAndMobile} {
     padding: 0;
@@ -18,7 +18,6 @@ const Container = styled.div`
   }
 
   .text {
-    color: #fcd34d;
     font-size: 1.1rem;
   }
 
@@ -44,12 +43,14 @@ const Header = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding-left: 5rem;
   padding-right: 7.5rem;
 
   ${mqTabletAndMobile} {
     flex-direction: column;
     gap: 1.4rem;
     justify-content: center;
+    padding-left: 0;
     padding-right: 0;
   }
 `;
@@ -59,6 +60,7 @@ export const MakeSomething = () => (
     <Header>
       <ViewPortMainInfo
         topic="Join other Sun harvesters"
+        topicColor="yellow"
         title="Make something awesome"
         description="Dui euismod iaculis libero, aliquet vitae et elementum porttitor. Eleifend mi tristique
           condimentum congue fusce nunc, donec magnis commodo."

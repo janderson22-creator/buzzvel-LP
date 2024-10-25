@@ -1,5 +1,6 @@
 'use client';
 
+import { AllThePower } from './viewports/AllThePower';
 import { Intro } from './viewports/Intro';
 import { MakeSomething } from './viewports/MakeSomething';
 import { PersonalizedServices } from './viewports/PersonalizedServices';
@@ -13,6 +14,7 @@ const Home = () => (
     <PersonalizedServices />
     <PowerfulFeatures />
     <MakeSomething />
+    <AllThePower />
   </>
 );
 
