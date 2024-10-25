@@ -9,6 +9,7 @@ export const Container = styled.div`
   ${mqTabletAndMobile} {
     flex-direction: column;
     padding: 0;
+    padding-bottom: 29rem;
   }
 `;
 

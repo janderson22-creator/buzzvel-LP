@@ -13,8 +13,8 @@ const Infos = styled.div`
   }
 `;
 
-const Header = styled.div<{ alignItems: string }>`
-  align-items: ${({ alignItems }) => alignItems};
+const Header = styled.div<{ $alignitems: string }>`
+  align-items: ${({ $alignitems }) => $alignitems};
   display: flex;
   flex-direction: column;
 
@@ -44,7 +44,7 @@ const Header = styled.div<{ alignItems: string }>`
 
   .description {
     line-height: 2.2rem;
-    text-align: ${({ alignItems }) => alignItems};
+    text-align: ${({ $alignitems }) => $alignitems};
 
     .align-items {
       text-align: center;
@@ -92,7 +92,7 @@ type Props = {
   title: string;
   description: string;
   data?: { title: string; subtitle: string }[];
-  alignItems?: 'center' | 'left';
+  $alignitems?: 'center' | 'left';
 };
 
 export const ViewPortMainInfo = ({
@@ -100,10 +100,10 @@ export const ViewPortMainInfo = ({
   title,
   description,
   data,
-  alignItems = 'left',
+  $alignitems = 'left',
 }: Props) => (
   <Infos>
-    <Header alignItems={alignItems}>
+    <Header $alignitems={$alignitems}>
       {topic && <Text className="text">{topic}</Text>}
       <Title className="title">{title}</Title>
       <Description className="description">{description}</Description>

@@ -39,6 +39,7 @@ const ButtonContain = styled.button<{ $variant: 'primary' | 'secondary' }>`
 const Request = styled.span`
   font-size: 1.2rem;
   font-weight: 700;
+  white-space: nowrap;
 `;
 
 type Props = {

@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Button } from '../../components/Button';
-import { Description } from '../../components/Description';
-import Text from '../../components/Text';
-import { Title } from '../../components/Title';
+import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
+import { mqTabletAndMobile } from '../../global-style';
 import { SliderContain } from './slider';
 
 const Container = styled.div`
@@ -12,6 +11,12 @@ const Container = styled.div`
   padding-bottom: 10rem;
   padding-left: 5rem;
 
+  ${mqTabletAndMobile} {
+    padding: 0;
+    padding-bottom: 10rem;
+    padding-top: 3rem;
+  }
+
   .text {
     color: #fcd34d;
     font-size: 1.1rem;
@@ -20,16 +25,18 @@ const Container = styled.div`
   .title,
   .description {
     color: #fff;
-  }
-
-  .title {
-    font-size: 3.5rem;
-    margin-bottom: 1.2rem;
-    margin-top: 0.5rem;
+    ${mqTabletAndMobile} {
+      text-align: center;
+    }
   }
 
   .description {
-    line-height: 2.1rem;
+    font-weight: 100;
+    width: 70%;
+
+    ${mqTabletAndMobile} {
+      width: 100%;
+    }
   }
 `;
 
@@ -38,20 +45,24 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   padding-right: 7.5rem;
+
+  ${mqTabletAndMobile} {
+    flex-direction: column;
+    gap: 1.4rem;
+    justify-content: center;
+    padding-right: 0;
+  }
 `;
 
 export const MakeSomething = () => (
   <Container>
     <Header>
-      <div>
-        <Text className="text">Join other Sun harvesters</Text>
-        <Title className="title">Make something awesome</Title>
-        <Description className="description">
-          Dui euismod iaculis libero, aliquet vitae et elementum porttitor. Eleifend mi tristique{' '}
-          <br />
-          condimentum congue fusce nunc, donec magnis commodo.
-        </Description>
-      </div>
+      <ViewPortMainInfo
+        topic="Join other Sun harvesters"
+        title="Make something awesome"
+        description="Dui euismod iaculis libero, aliquet vitae et elementum porttitor. Eleifend mi tristique
+          condimentum congue fusce nunc, donec magnis commodo."
+      />
 
       <Button $variant="secondary" />
     </Header>
