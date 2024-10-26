@@ -11,6 +11,7 @@ export const GlobalStyle = styled.createGlobalStyle`
   :root {
     --txt-0: #0f172a;
     --txt-1: #0369a1;
+    --txt-2: #fff;
     --primary-color: #581c87;
     --secondary-color: #fcd34d;
     --tertiary-color: #78350f;

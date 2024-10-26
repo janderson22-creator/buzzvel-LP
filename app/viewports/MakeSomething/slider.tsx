@@ -43,13 +43,12 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
-  background: #fff;
+  background: var(--txt-2);
   border-radius: 0.6rem;
   margin-left: 1.6rem;
   max-width: 21rem;
   min-width: 21rem;
-  padding: 2rem;
-  padding-top: 6.5rem;
+  padding: 3rem 2rem 2rem;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -65,6 +64,7 @@ const Card = styled.div`
 
   .comment {
     font-size: 1.1rem;
+    line-height: 1.5rem;
   }
 `;
 
@@ -87,7 +87,7 @@ const UserInfo = styled.div`
   }
 
   .user-name {
-    color: #000;
+    color: var(--txt-0);
     font-size: 1.1rem;
   }
 
@@ -138,13 +138,11 @@ const ArrowWrapper = styled.div`
   }
 `;
 
-const Arrow = ({ side, className, onClick }: ArrowProps) => {
-  return (
-    <ArrowWrapper className={`${className} ${side}`} onClick={onClick}>
-      <Image src={`icons/arrow-${side}.svg`} alt={`arrow-${side}`} className="arrow" />
-    </ArrowWrapper>
-  );
-};
+const Arrow = ({ side, className, onClick }: ArrowProps) => (
+  <ArrowWrapper className={`${className} ${side}`} onClick={onClick}>
+    <Image src={`icons/arrow-${side}.svg`} alt={`arrow-${side}`} className="arrow" />
+  </ArrowWrapper>
+);
 
 const settings = {
   slidesToShow: 4,
@@ -173,17 +171,17 @@ const settings = {
 export const SliderContain = () => (
   <Container>
     <Slider {...settings} className="slider-container">
-      {testimonials.map((testimonial) => (
-        <Card key={testimonial.name}>
+      {testimonials.map(({ name, comment, image, kwh }) => (
+        <Card key={name}>
           <Text className="comment" tag="p">
-            {testimonial.comment}
+            {comment}
           </Text>
 
           <UserInfo>
-            <Image src={testimonial.image} alt={testimonial.name} className="profile-image" />
-            <div>
-              <Text className="user-name">{testimonial.name}</Text>
-              <Text className="kwh">{testimonial.kwh}KWh</Text>
+            <Image src={image} alt={name} className="profile-image" />
+            <div className="user-details">
+              <Text className="user-name">{name}</Text>
+              <Text className="kwh">{kwh}KWh</Text>
             </div>
           </UserInfo>
         </Card>

@@ -22,7 +22,7 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
     align-items: center;
   }
 
-  .text {
+  .topic {
     color: ${({ $topicColor }) =>
       $topicColor === 'yellow' ? '#fcd34d' : 'var(--quaternary-color)'};
     font-size: 1.2rem;
@@ -34,6 +34,7 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
   }
 
   .title {
+    color: ${({ $topicColor }) => ($topicColor === 'yellow' ? 'var(--txt-2)' : 'var(--txt-0)')};
     font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '3.5rem' : '4.5rem')};
     font-weight: 800;
     margin-bottom: 1.3rem;
@@ -47,6 +48,7 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
   }
 
   .description {
+    color: ${({ $topicColor }) => ($topicColor === 'yellow' ? 'var(--txt-2)' : 'var(--txt-0)')};
     line-height: 2.2rem;
     text-align: ${({ $alignItems }) => $alignItems};
 
@@ -108,7 +110,7 @@ export const ViewPortMainInfo = ({
 }: Props) => (
   <Infos>
     <Header $titleSize={titleSize} $topicColor={topicColor} $alignItems={alignItems}>
-      {topic && <Text className="text">{topic}</Text>}
+      {topic && <Text className="topic">{topic}</Text>}
       <Title className="title">{title}</Title>
       {description && <Description className="description">{description}</Description>}
     </Header>
