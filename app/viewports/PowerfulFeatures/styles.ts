@@ -21,12 +21,16 @@ export const Icons = styled.div`
     width: 100%;
   }
 
-  .mobile-app {
+  .mobile-app,
+  .mobile-background {
     height: 40rem;
     position: absolute;
+    width: 40rem;
+  }
+
+  .mobile-app {
     right: -7rem;
     top: 2rem;
-    width: 40rem;
     z-index: 1;
 
     ${mqTabletAndMobile} {
@@ -37,12 +41,9 @@ export const Icons = styled.div`
     }
   }
 
-  .mobile-app-background {
-    height: 40rem;
-    position: absolute;
+  .mobile-background {
     right: -5rem;
     top: -2rem;
-    width: 40rem;
 
     ${mqTabletAndMobile} {
       height: 31rem;

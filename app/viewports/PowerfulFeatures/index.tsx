@@ -16,11 +16,7 @@ export const PowerfulFeatures = () => (
 
     <S.Icons>
       <Image src="icons/mobile-app-powerful.svg" className="mobile-app" alt="mobile-app" />
-      <Image
-        src="icons/background-powerful.svg"
-        className="mobile-app-background"
-        alt="mobile-app-background"
-      />
+      <Image src="icons/bg-powerful.svg" className="mobile-background" alt="mobile-background" />
     </S.Icons>
   </S.Container>
 );
