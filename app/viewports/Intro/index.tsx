@@ -1,23 +1,20 @@
 'use client';
 
 import { Button } from '../../components/Button';
-import { Description } from '../../components/Description';
 import { Image } from '../../components/Image';
 import Text from '../../components/Text';
-import { Title } from '../../components/Title';
+import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import * as S from './styles';
 
 export const Intro = () => (
   <S.Container>
     <S.Infos>
-      <Title className="title">
-        Get the Sun to <br /> Power Your Home
-      </Title>
-      <Description className="description">
-        Viverra viverra nibh enim et aliquam, enim. Tempor, sit <br /> mus viverra orci dui
-        consequat turpis scelerisque.
-      </Description>
-
+      <ViewPortMainInfo
+        title="Get the Sun to Power Your Home"
+        titleSize="large"
+        description="Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui
+        consequat turpis scelerisque."
+      />
       <Button $variant="primary" />
 
       <S.Comment>
@@ -26,7 +23,7 @@ export const Intro = () => (
           consequat turpis scelerisque faucibus.”
         </Text>
         <S.Profile>
-          <Image src="/woman-profile.webp" className="woman-image" alt="employee-working" />
+          <Image src="/woman-profile.webp" className="user-image" alt="employee-working" />
           <S.UserInfos>
             <Text tag="span">Rwanda Melflor</Text>
             <Text tag="span" className="link">

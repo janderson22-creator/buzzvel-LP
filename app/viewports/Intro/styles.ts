@@ -1,21 +1,18 @@
 import styled from 'styled-components';
-import { mqMobile, mqTablet } from '../../global-style';
+import { mqMobile, mqTablet, mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 0;
-  padding-left: 5rem;
+  padding: 1.5rem 0 0 5rem;
   position: relative;
 
   ${mqMobile} {
-    padding: 0;
-    padding-top: 20rem;
+    padding: 20rem 0 0;
   }
 
   ${mqTablet} {
-    padding: 0.8rem;
-    padding-top: 1rem;
+    padding: 1rem 0 0.8rem;
   }
 
   .employee-image {
@@ -26,66 +23,40 @@ export const Container = styled.div`
     width: 34rem;
     z-index: 0;
 
-    ${mqMobile} {
+    ${mqTabletAndMobile} {
       height: 25rem;
       object-fit: contain;
+    }
+
+    ${mqMobile} {
       width: 18rem;
     }
 
     ${mqTablet} {
-      height: 25rem;
-      object-fit: contain;
       width: 20rem;
     }
   }
 
-  .woman-image {
+  .user-image {
     height: 4rem;
     width: 4rem;
   }
 `;
 
 export const Infos = styled.div`
-  align-items: left;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  width: 50%;
+
+  ${mqTabletAndMobile} {
+    align-items: center;
+  }
 
   ${mqMobile} {
-    align-items: center;
     padding: 0 1rem;
-  }
-
-  .title {
-    font-size: 4.5rem;
-
-    ${mqMobile} {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    ${mqTablet} {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-  }
-
-  .description {
-    text-align: left;
-
-    ${mqMobile} {
-      text-align: center;
-
-      br {
-        display: none;
-      }
-    }
-
-    ${mqTablet} {
-      line-height: 1.5rem;
-      width: 60%;
-    }
+    width: unset;
   }
 `;
 
@@ -100,7 +71,7 @@ export const Comment = styled.div`
   }
 
   ${mqTablet} {
-    margin-top: 3rem;
+    margin: 3rem 0 0 1.5rem;
   }
 
   .message {
