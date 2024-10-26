@@ -16,7 +16,8 @@ const Container = styled.div`
 
   ${mqMobile} {
     background: #581c87;
-    padding-bottom: 19rem;
+    overflow: hidden;
+    padding-bottom: 33rem;
     padding-top: 0;
   }
 
@@ -73,7 +74,6 @@ const Header = styled.div`
   ${mqMobile} {
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
     padding: 0;
   }
 
