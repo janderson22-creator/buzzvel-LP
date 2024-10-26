@@ -14,9 +14,11 @@ export const PickTheSun = () => (
       />
     </S.Infos>
 
-    <div className="orange-ball" />
-    <div className="purple-ball" />
-    <Image src="/desktop.webp" className="desktop-web-image" alt="desktop" />
-    <Image src="/desktop-mob.webp" className="desktop-mob-image" alt="desktop" />
+    <S.Images>
+      <div className="orange-ball" />
+      <div className="purple-ball" />
+      <Image src="/desktop.webp" className="image-desktop" alt="desktop-view" />
+      <Image src="/desktop-mob.webp" className="image-mobile" alt="mobile-view" />
+    </S.Images>
   </S.Container>
 );

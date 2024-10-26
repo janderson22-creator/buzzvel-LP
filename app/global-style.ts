@@ -15,6 +15,8 @@ export const GlobalStyle = styled.createGlobalStyle`
     --secondary-color: #fcd34d;
     --tertiary-color: #78350f;
     --quaternary-color: #d97706;
+    --bg-0: #f59e0b;
+    --bg-1: #7e22ce;
   }
 
   * {

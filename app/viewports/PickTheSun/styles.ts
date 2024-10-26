@@ -5,73 +5,75 @@ export const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20rem;
-  padding-bottom: 30rem;
   padding-top: 5rem;
+`;
+
+export const Images = styled.div`
+  height: 40rem;
   position: relative;
+  width: 100%;
 
   ${mqTabletAndMobile} {
-    margin-bottom: 15rem;
-    padding-bottom: 4.4rem;
+    height: 20rem;
+  }
+
+  .orange-ball,
+  .purple-ball {
+    border-radius: 50%;
+    position: absolute;
   }
 
   .orange-ball {
-    background: #f59e0b;
-    border-radius: 100%;
-    bottom: -7rem;
-    height: 40rem;
-    left: -18rem;
-    position: absolute;
-    width: 40rem;
+    background: var(--bg-0);
+    height: 30rem;
+    left: -10rem;
+    top: -4rem;
+    width: 30rem;
 
     ${mqTabletAndMobile} {
-      height: 20rem;
-      width: 20rem;
-    }
-
-    ${mqMobile} {
-      bottom: -12rem;
-      left: -13rem;
-    }
-
-    ${mqTablet} {
-      bottom: -14rem;
-      left: -10rem;
-    }
-  }
-
-  .purple-ball {
-    background: #7e22ce;
-    border-radius: 100%;
-    bottom: -6rem;
-    height: 28rem;
-    position: absolute;
-    right: -5rem;
-    width: 28rem;
-
-    ${mqTabletAndMobile} {
-      height: 16rem;
+      height: 15rem;
+      top: -3rem;
       width: 15rem;
     }
 
     ${mqMobile} {
-      bottom: -13rem;
+      left: -10rem;
+    }
+
+    ${mqTablet} {
+      left: -5rem;
+    }
+  }
+
+  .purple-ball {
+    background: var(--bg-1);
+    height: 26rem;
+    right: -2rem;
+    top: 5rem;
+    width: 26rem;
+
+    ${mqTabletAndMobile} {
+      height: 16rem;
+      top: -1rem;
+      width: 15rem;
+    }
+
+    ${mqMobile} {
       right: -12rem;
     }
 
     ${mqTablet} {
-      bottom: -20rem;
       right: -5rem;
     }
   }
 
-  .desktop-web-image {
-    bottom: -19rem;
+  .image-desktop {
     height: 100%;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
+    top: 2rem;
     width: 80%;
 
     ${mqMobile} {
@@ -79,11 +81,11 @@ export const Container = styled.div`
     }
   }
 
-  .desktop-mob-image {
+  .image-mobile {
     display: none;
 
     ${mqMobile} {
-      bottom: -17rem;
+      bottom: 0;
       display: block;
       height: 18rem;
       position: absolute;
