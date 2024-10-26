@@ -13,7 +13,7 @@ const Infos = styled.div`
   }
 `;
 
-const Header = styled.div<{ $topicColor: 'yellow' | 'brown'; $alignItems: string }>`
+const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems: string }>`
   align-items: ${({ $alignItems }) => $alignItems};
   display: flex;
   flex-direction: column;
@@ -34,22 +34,21 @@ const Header = styled.div<{ $topicColor: 'yellow' | 'brown'; $alignItems: string
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '3.5rem' : '4.5rem')};
+    font-weight: 800;
     margin-bottom: 1.3rem;
     margin-top: 0.5rem;
 
     ${mqTabletAndMobile} {
-      font-size: 2rem;
+      font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '2rem' : '2.5rem')};
+      font-weight: 700;
+      text-align: center;
     }
   }
 
   .description {
     line-height: 2.2rem;
     text-align: ${({ $alignItems }) => $alignItems};
-
-    .align-items {
-      text-align: center;
-    }
 
     ${mqTabletAndMobile} {
       text-align: center;
@@ -95,6 +94,7 @@ type Props = {
   description?: string;
   data?: { title: string; subtitle: string }[];
   alignItems?: 'center' | 'left';
+  titleSize?: 'small' | 'large';
 };
 
 export const ViewPortMainInfo = ({
@@ -104,9 +104,10 @@ export const ViewPortMainInfo = ({
   description,
   data,
   alignItems = 'left',
+  titleSize = 'small',
 }: Props) => (
   <Infos>
-    <Header $topicColor={topicColor} $alignItems={alignItems}>
+    <Header $titleSize={titleSize} $topicColor={topicColor} $alignItems={alignItems}>
       {topic && <Text className="text">{topic}</Text>}
       <Title className="title">{title}</Title>
       {description && <Description className="description">{description}</Description>}

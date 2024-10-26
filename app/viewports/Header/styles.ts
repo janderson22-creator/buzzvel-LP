@@ -12,21 +12,20 @@ export const ContainHeader = styled.header`
     padding: 0.8rem 1rem;
   }
 `;
-
-export const CompanyName = styled.span`
-  font-size: 2rem;
-  font-weight: 700;
-  margin-right: 2.2rem;
-`;
-
 export const ContainNav = styled.div`
   align-items: center;
   display: flex;
-`;
 
-export const Nav = styled.nav`
-  ${mqTabletAndMobile} {
-    display: none;
+  .company-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 2.2rem;
+  }
+
+  nav {
+    ${mqTabletAndMobile} {
+      display: none;
+    }
   }
 `;
 
@@ -34,7 +33,6 @@ export const NavList = styled.ul`
   align-items: center;
   display: flex;
   gap: 1rem;
-  justify-content: center;
   list-style-type: none;
 `;
 
@@ -61,7 +59,7 @@ export const Support = styled.div`
 `;
 
 export const SupportNumber = styled.span`
-  color: #0369a1;
+  color: var(--txt-1);
   padding: 0 1rem;
 
   &:hover {

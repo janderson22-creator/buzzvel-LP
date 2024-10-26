@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import styled, { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import { GlobalStyle } from './global-style';
+import { Footer } from './viewports/Footer';
 import { Header } from './viewports/Header';
 
 const StyleSSR = ({ children }: { children: any }) => {
@@ -43,6 +44,7 @@ export const RootLayout = ({ children }: any) => {
           <GlobalStyle />
           <Header />
           {children}
+          <Footer />
         </Body>
       </Html>
     </StyleSSR>

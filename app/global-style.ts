@@ -10,6 +10,7 @@ const styled = { createGlobalStyle }; // To fix by Prettier
 export const GlobalStyle = styled.createGlobalStyle`
   :root {
     --txt-0: #0f172a;
+    --txt-1: #0369a1;
     --primary-color: #581c87;
     --secondary-color: #fcd34d;
     --tertiary-color: #78350f;
