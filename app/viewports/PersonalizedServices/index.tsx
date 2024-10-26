@@ -7,11 +7,7 @@ export const PersonalizedServices = () => (
   <S.Container>
     <S.Icons>
       <Image src="icons/mobile-app-personalized.svg" className="mobile-app" alt="mobile-app" />
-      <Image
-        src="icons/background-personalized.svg"
-        className="mobile-app-background"
-        alt="mobile-app-background"
-      />
+      <Image src="icons/bg-personalized.svg" className="mobile-background" alt="background" />
     </S.Icons>
 
     <S.Infos>

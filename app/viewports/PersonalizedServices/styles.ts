@@ -4,12 +4,13 @@ import { mqTabletAndMobile } from '../../global-style';
 export const Container = styled.div`
   display: flex;
   padding-right: 5rem;
-  padding-top: 2rem;
+  padding-top: 6rem;
 
   ${mqTabletAndMobile} {
     flex-direction: column-reverse;
     margin-bottom: 35rem;
     padding-right: unset;
+    padding-top: 2rem;
   }
 `;
 
@@ -21,12 +22,16 @@ export const Icons = styled.div`
     width: 100%;
   }
 
-  .mobile-app {
+  .mobile-app,
+  .mobile-background {
     height: 40rem;
     left: -5rem;
     position: absolute;
-    top: 2rem;
     width: 40rem;
+  }
+
+  .mobile-app {
+    top: 2rem;
     z-index: 1;
 
     ${mqTabletAndMobile} {
@@ -37,12 +42,7 @@ export const Icons = styled.div`
     }
   }
 
-  .mobile-app-background {
-    height: 40rem;
-    left: -5rem;
-    position: absolute;
-    width: 40rem;
-
+  .mobile-background {
     ${mqTabletAndMobile} {
       height: 35rem;
       left: -10rem;
