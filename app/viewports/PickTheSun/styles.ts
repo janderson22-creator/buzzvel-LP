@@ -13,6 +13,15 @@ export const Images = styled.div`
   position: relative;
   width: 100%;
 
+  .text {
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 3.1rem;
+    width: 100%;
+    z-index: 10;
+  }
+
   ${mqTabletAndMobile} {
     height: 20rem;
   }
@@ -95,8 +104,13 @@ export const Images = styled.div`
   }
 `;
 
+// export const Desktop = styled.div`
+//   position: relative;
+// `;
+
 export const Infos = styled.div`
   padding: 0 15rem;
+  z-index: 2;
 
   ${mqTabletAndMobile} {
     padding: 0;

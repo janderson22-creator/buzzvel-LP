@@ -18,6 +18,28 @@ export const Icons = styled.div`
   position: relative;
   width: 70%;
 
+  .slick-prev::before,
+  .slick-next::before {
+    display: none;
+  }
+
+  .slider-container {
+    bottom: 0;
+    left: 6rem;
+    margin: 0;
+    max-height: 12rem;
+    overflow: hidden;
+    position: absolute;
+    top: 15rem;
+    width: 62%;
+    z-index: 3;
+
+    .slide-item {
+      height: 12rem;
+      width: 10rem;
+    }
+  }
+
   ${mqTabletAndMobile} {
     width: 100%;
   }
@@ -33,7 +55,6 @@ export const Icons = styled.div`
   .mobile-app {
     top: 2rem;
     z-index: 1;
-
     ${mqTabletAndMobile} {
       height: 30rem;
       left: -6rem;

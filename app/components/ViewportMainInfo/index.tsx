@@ -1,8 +1,11 @@
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 import styled from 'styled-components';
 import { mqTabletAndMobile } from '../../global-style';
 import { Description } from '../Description';
 import Text from '../Text';
 import { Title } from '../Title';
+import AnimatedBlock from './animatedBlock';
 
 const Infos = styled.div`
   display: flex;
@@ -37,8 +40,7 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
     color: ${({ $topicColor }) => ($topicColor === 'yellow' ? 'var(--txt-2)' : 'var(--txt-0)')};
     font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '3.5rem' : '4.5rem')};
     font-weight: 800;
-    margin-bottom: 1.3rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 1.3rem;
 
     ${mqTabletAndMobile} {
       font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '2rem' : '2.5rem')};
@@ -107,25 +109,43 @@ export const ViewPortMainInfo = ({
   data,
   alignItems = 'left',
   titleSize = 'small',
-}: Props) => (
-  <Infos>
-    <Header $titleSize={titleSize} $topicColor={topicColor} $alignItems={alignItems}>
-      {topic && <Text className="topic">{topic}</Text>}
-      <Title className="title">{title}</Title>
-      {description && <Description className="description">{description}</Description>}
-    </Header>
+}: Props) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-    {data && (
-      <Grid>
-        {data.map((item) => (
-          <GridItem key={item.title}>
-            <Text>
-              <strong>{item.title}</strong>
-            </Text>
-            <Text tag="p">{item.subtitle}</Text>
-          </GridItem>
-        ))}
-      </Grid>
-    )}
-  </Infos>
-);
+  return (
+    <Infos ref={ref}>
+      <Header $titleSize={titleSize} $topicColor={topicColor} $alignItems={alignItems}>
+        {topic && (
+          <AnimatedBlock isVisible={isInView}>
+            <Text className="topic">{topic}</Text>
+          </AnimatedBlock>
+        )}
+        <AnimatedBlock isVisible={isInView}>
+          <Title className="title">{title}</Title>
+        </AnimatedBlock>
+
+        {description && (
+          <AnimatedBlock isVisible={isInView}>
+            <Description className="description">{description}</Description>
+          </AnimatedBlock>
+        )}
+      </Header>
+
+      {data && (
+        <Grid>
+          {data.map((item) => (
+            <AnimatedBlock key={item.title} isVisible={isInView}>
+              <GridItem>
+                <Text>
+                  <strong>{item.title}</strong>
+                </Text>
+                <Text tag="p">{item.subtitle}</Text>
+              </GridItem>
+            </AnimatedBlock>
+          ))}
+        </Grid>
+      )}
+    </Infos>
+  );
+};
