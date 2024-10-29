@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mqMobile, mqTablet } from '../../global-style';
+import { mqMobile, mqTablet, mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
   align-items: center;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   position: relative;
 
   ${mqMobile} {
-    background: var(--primary-color);
+    background: var(--color-1);
     overflow: hidden;
     padding: 0 0 33rem;
   }
@@ -59,7 +59,7 @@ export const Header = styled.div`
   padding: 0 10rem 0 5rem;
   z-index: 2;
 
-  ${mqMobile}, ${mqTablet} {
+  ${mqTabletAndMobile} {
     flex-direction: column;
   }
 

@@ -6,12 +6,12 @@ import { ArrowRight } from './arrowRight';
 
 const theme = {
   primary: {
-    color: 'var(--primary-color)',
-    hoverTextColor: 'var(--secondary-color)',
+    color: 'var(--color-1)',
+    hoverTextColor: 'var(--color-2)',
   },
   secondary: {
-    color: 'var(--secondary-color)',
-    hoverTextColor: 'var(--tertiary-color)',
+    color: 'var(--color-2)',
+    hoverTextColor: 'var(--color-3)',
   },
 };
 
@@ -31,7 +31,7 @@ const ButtonContain = styled.button<{ $variant: 'primary' | 'secondary' }>`
   &:hover {
     background-color: ${({ $variant }) => theme[$variant].color};
     border: 0.125rem solid transparent;
-    box-shadow: 0 0.2rem 0.2rem 0 #00000040;
+    box-shadow: 0 0.2rem 0.2rem 0 var(--txt-0);
     color: ${({ $variant }) => theme[$variant].hoverTextColor};
   }
 `;
@@ -45,23 +45,23 @@ const Request = styled.span`
 type Props = {
   onClick?: () => void;
   className?: string;
-  $variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary';
 };
 
-export const Button = ({ onClick, className, $variant }: Props) => {
+export const Button = ({ onClick, className, variant }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <ButtonContain
       onClick={onClick}
       className={className}
-      $variant={$variant}
+      $variant={variant}
       type="button"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Request>Request a Quote</Request>
-      <ArrowRight color={isHovered ? theme[$variant].hoverTextColor : theme[$variant].color} />
+      <ArrowRight color={isHovered ? theme[variant].hoverTextColor : theme[variant].color} />
     </ButtonContain>
   );
 };

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-import { PhoneInterfacePersonalized } from '../../components/AnimatedIcons/PhoneInterfacePersonalized';
 import { Image } from '../../components/Image';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { powerfulFeatures } from '../../data';
-import { ovalBgPulsing } from '../../utils/animations';
+import { PhoneInterfacePersonalized } from '../../components/animatedIcons/PhoneInterfacePersonalized';
+import { personalizedServices } from '../../data';
+import { ovalBgPulsing } from './animations';
 import * as S from './styles';
 
 export const PersonalizedServices = () => {
@@ -41,10 +41,10 @@ export const PersonalizedServices = () => {
 
       <S.Infos>
         <ViewPortMainInfo
-          topic="Services"
-          title="Personalized services"
-          description="Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit."
-          data={powerfulFeatures}
+          topic={personalizedServices.topic}
+          title={personalizedServices.title}
+          description={personalizedServices.description}
+          data={personalizedServices.sections}
         />
       </S.Infos>
     </S.Container>

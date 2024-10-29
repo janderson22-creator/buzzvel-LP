@@ -1,18 +1,17 @@
 import { motion } from 'framer-motion';
 import { Image } from '../../components/Image';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { purpleBallPulsing, sunPulsing } from '../../utils/animations';
+import { pickTheSun } from '../../data';
+import { sunPulsing, purpleBallPulsing } from './animations';
 import * as S from './styles';
 
 export const PickTheSun = () => (
   <S.Container id="products">
     <S.Infos>
       <ViewPortMainInfo
-        topic="No more waste"
-        title="Pick the Sun"
-        description="Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis
-        pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin."
-        alignItems="center"
+        topic={pickTheSun.topic}
+        title={pickTheSun.title}
+        description={pickTheSun.description}
       />
     </S.Infos>
 

@@ -79,10 +79,6 @@ export const Comment = styled.div`
 
     ${mqMobile} {
       text-align: left;
-
-      br {
-        display: none;
-      }
     }
   }
 `;

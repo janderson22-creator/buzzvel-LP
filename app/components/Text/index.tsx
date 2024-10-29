@@ -8,11 +8,11 @@ type Props = {
   tag?: 'span' | 'p';
 };
 
-const StyledText = styled.span<{ className?: string }>`
+const StyledText = styled.span`
   color: var(--txt-0);
 `;
 
-export const Text = ({ children, tag = 'span', className = '' }: Props) => {
+export const Text = ({ children, tag = 'span', className }: Props) => {
   return (
     <StyledText as={tag} className={className}>
       {children}

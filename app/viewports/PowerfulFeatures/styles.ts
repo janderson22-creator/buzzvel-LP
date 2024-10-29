@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mqTabletAndMobile } from '../../global-style';
+import { mqMobile, mqTablet, mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
   display: flex;
@@ -32,9 +32,31 @@ export const Icons = styled.div`
     width: 55%;
     z-index: 3;
 
+    ${mqTabletAndMobile} {
+      bottom: unset;
+      overflow: unset;
+    }
+
+    ${mqMobile} {
+      right: 2.5rem;
+      top: 24rem;
+      width: 54%;
+    }
+
+    ${mqTablet} {
+      right: 2.5rem;
+      top: 24rem;
+      width: 25%;
+    }
+
     .slide-item {
       height: 6rem;
       width: 6rem;
+
+      ${mqTabletAndMobile} {
+        height: 5rem;
+        width: 5rem;
+      }
     }
   }
 

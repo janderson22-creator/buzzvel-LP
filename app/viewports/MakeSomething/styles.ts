@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
-  background: var(--primary-color);
+  background: var(--color-1);
   margin-top: 8rem;
   padding: 5rem 0 10rem;
   z-index: 2;

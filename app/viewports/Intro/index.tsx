@@ -2,11 +2,12 @@
 
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { AnimatedBlock } from '../../components/Animation/animatedBlock';
+import { AnimatedBlock } from '../../components/Animation';
 import { Button } from '../../components/Button';
 import { Image } from '../../components/Image';
 import { Text } from '../../components/Text';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
+import { intro } from '../../data';
 import * as S from './styles';
 
 export const Intro = () => {
@@ -16,29 +17,23 @@ export const Intro = () => {
   return (
     <S.Container ref={ref}>
       <S.Infos>
-        <ViewPortMainInfo
-          title="Get the Sun to Power Your Home"
-          titleSize="large"
-          description="Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui
-        consequat turpis scelerisque."
-        />
+        <ViewPortMainInfo title={intro.title} description={intro.description} titleSize="large" />
 
         <AnimatedBlock isVisible={isInView}>
-          <Button $variant="primary" />
+          <Button variant="primary" />
         </AnimatedBlock>
 
         <AnimatedBlock isVisible={isInView}>
           <S.Comment>
             <Text tag="p" className="message">
-              “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui <br />
-              consequat turpis scelerisque faucibus.”
+              {intro.message}
             </Text>
             <S.Profile>
               <Image src="/woman-profile.webp" className="user-image" alt="employee-working" />
               <S.UserInfos>
-                <Text tag="span">Rwanda Melflor</Text>
+                <Text tag="span">{intro.name}</Text>
                 <Text tag="span" className="link">
-                  zerowaste.com
+                  {intro.website}
                 </Text>
               </S.UserInfos>
             </S.Profile>

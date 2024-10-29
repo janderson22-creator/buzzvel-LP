@@ -12,10 +12,10 @@ export const GlobalStyle = styled.createGlobalStyle`
     --txt-0: #0f172a;
     --txt-1: #0369a1;
     --txt-2: #fff;
-    --primary-color: #581c87;
-    --secondary-color: #fcd34d;
-    --tertiary-color: #78350f;
-    --quaternary-color: #d97706;
+    --color-1: #581c87;
+    --color-2: #fcd34d;
+    --color-3: #78350f;
+    --color-4: #d97706;
     --bg-0: #f59e0b;
     --bg-1: #7e22ce;
     --bg-2: #a252ee;

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-import { PhoneInterfacePowerful } from '../../components/AnimatedIcons/PhoneInterfacePowerful';
 import { Image } from '../../components/Image';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { personalizedServices } from '../../data';
-import { ovalBgPulsing } from '../../utils/animations';
+import { PhoneInterfacePowerful } from '../../components/animatedIcons/PhoneInterfacePowerful';
+import { powerfulFeatures } from '../../data';
+import { ovalBgPulsing } from './animation';
 import * as S from './styles';
 
 export const PowerfulFeatures = () => {
@@ -26,10 +26,10 @@ export const PowerfulFeatures = () => {
     <S.Container id="solutions">
       <S.Infos>
         <ViewPortMainInfo
-          topic="System features"
-          title="Powerful features"
-          description="Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit."
-          data={personalizedServices}
+          topic={powerfulFeatures.topic}
+          title={powerfulFeatures.title}
+          description={powerfulFeatures.description}
+          data={powerfulFeatures.sections}
         />
       </S.Infos>
 

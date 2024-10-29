@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 import { Image } from '../../components/Image';
 import { Text } from '../../components/Text';
-import { testimonials } from '../../data';
+import { makeSomething } from '../../data/makeSomething';
 import { mqTabletAndMobile } from '../../global-style';
 
 const Container = styled.div`
@@ -45,7 +45,7 @@ const Container = styled.div`
 const Card = styled.div`
   background: var(--txt-2);
   border-radius: 0.6rem;
-  margin-left: 1.6rem;
+  margin-left: 1.5rem;
   max-width: 21rem;
   min-width: 21rem;
   padding: 3rem 2rem 2rem;
@@ -56,7 +56,8 @@ const Card = styled.div`
   }
 
   ${mqTabletAndMobile} {
-    /* stylelint-disable-next-line rule-empty-line-before */
+    margin-left: 0.8rem;
+
     &:hover {
       transform: none;
     }
@@ -171,7 +172,7 @@ const settings = {
 export const SliderContain = () => (
   <Container>
     <Slider {...settings} className="slider-container">
-      {testimonials.map(({ name, comment, image, kwh }) => (
+      {makeSomething.testimonials.map(({ name, comment, image, kwh }) => (
         <Card key={name}>
           <Text className="comment" tag="p">
             {comment}

@@ -2,7 +2,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styled from 'styled-components';
 import { mqTabletAndMobile } from '../../global-style';
-import { AnimatedBlock } from '../Animation/animatedBlock';
+import { AnimatedBlock } from '../Animation';
 import { Description } from '../Description';
 import { Text } from '../Text';
 import { Title } from '../Title';
@@ -26,8 +26,7 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
   }
 
   .topic {
-    color: ${({ $topicColor }) =>
-      $topicColor === 'yellow' ? '#fcd34d' : 'var(--quaternary-color)'};
+    color: ${({ $topicColor }) => ($topicColor === 'yellow' ? '#fcd34d' : 'var(--color-4)')};
     font-size: 1.2rem;
     font-weight: 500;
 
