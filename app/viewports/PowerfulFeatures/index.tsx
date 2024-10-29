@@ -22,7 +22,7 @@ export const PowerfulFeatures = () => {
   ];
 
   return (
-    <S.Container>
+    <S.Container id="solutions">
       <S.Infos>
         <ViewPortMainInfo
           topic="System features"

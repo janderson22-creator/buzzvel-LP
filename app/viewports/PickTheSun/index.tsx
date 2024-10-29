@@ -4,7 +4,7 @@ import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import * as S from './styles';
 
 export const PickTheSun = () => (
-  <S.Container>
+  <S.Container id="products">
     <S.Infos>
       <ViewPortMainInfo
         topic="No more waste"

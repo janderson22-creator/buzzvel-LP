@@ -21,7 +21,7 @@ export const PersonalizedServices = () => {
   ];
 
   return (
-    <S.Container>
+    <S.Container id="services">
       <S.Icons>
         <Slider {...settings} className="slider-container">
           {slideItems.map((item) => (

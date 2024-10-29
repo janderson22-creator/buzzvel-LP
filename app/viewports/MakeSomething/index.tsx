@@ -4,7 +4,7 @@ import { SliderContain } from './slider';
 import * as S from './styles';
 
 export const MakeSomething = () => (
-  <S.Container>
+  <S.Container id="configure">
     <S.Header>
       <div className="info-wrapper">
         <ViewPortMainInfo
