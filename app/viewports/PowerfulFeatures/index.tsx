@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import { Image } from '../../components/Image';
@@ -36,7 +38,7 @@ export const PowerfulFeatures = () => {
       <S.Icons>
         <Slider {...settings} className="slider-container">
           {slideItems.map((item) => (
-            <Image key={item} src={item} alt="personalized-slide" className="slide-item" />
+            <Image key={item} src={item} className="slide-item" />
           ))}
         </Slider>
         <PhoneInterfacePowerful className="mobile-app" />

@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Image } from '../../components/Image';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
@@ -12,14 +14,15 @@ export const PickTheSun = () => (
         topic={pickTheSun.topic}
         title={pickTheSun.title}
         description={pickTheSun.description}
+        alignItems="center"
       />
     </S.Infos>
 
     <S.Images>
       <motion.div animate="animate" variants={sunPulsing} className="orange-ball" />
       <motion.div animate="animate" className="purple-ball" variants={purpleBallPulsing} />
-      <Image src="icons/desktop.svg" className="image-desktop" alt="desktop-view" />
-      <Image src="/desktop-mob.webp" className="image-mobile" alt="mobile-view" />
+      <Image src="icons/desktop.svg" className="image-desktop" />
+      <Image src="/desktop-mob.webp" className="image-mobile" />
     </S.Images>
   </S.Container>
 );

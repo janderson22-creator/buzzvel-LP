@@ -3,10 +3,11 @@ import NextImage from 'next/image';
 type Props = {
   src: string;
   className: string;
-  alt: string;
+  alt?: string;
+  priority?: true;
 };
 
-export const Image = ({ src, className, alt }: Props) => (
+export const Image = ({ src, className, alt = '', priority }: Props) => (
   <NextImage
     src={src}
     className={className}
@@ -14,7 +15,8 @@ export const Image = ({ src, className, alt }: Props) => (
     width={50}
     height={50}
     sizes="100vw"
-    quality={100}
-    priority
+    quality={80}
+    priority={priority}
+    loading={priority ? 'eager' : 'lazy'}
   />
 );

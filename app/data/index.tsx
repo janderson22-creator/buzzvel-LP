@@ -4,5 +4,5 @@ export { makeSomething } from './makeSomething';
 export { allThePower } from './allThePower';
 export { header } from './header';
 export { footer } from './footer';
-export { personalizedServices } from './PersonalizedService';
-export { powerfulFeatures } from './powerfulFeatureds';
+export { personalizedServices } from './personalizedServices';
+export { powerfulFeatures } from './powerfulFeatures';

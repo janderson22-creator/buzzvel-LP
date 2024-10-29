@@ -39,8 +39,29 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   padding: 0.8rem 0.6rem;
 
-  &:hover {
-    text-decoration: underline;
+  a {
+    color: black;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &::after {
+      background-color: var(--color-2);
+      bottom: 0;
+      content: '';
+      height: 0.1rem;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+      width: 100%;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
 `;
 

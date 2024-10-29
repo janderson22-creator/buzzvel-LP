@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import { Image } from '../../components/Image';
@@ -9,10 +11,11 @@ import * as S from './styles';
 
 export const PersonalizedServices = () => {
   const settings = {
-    slidesToShow: 2,
+    slidesToShow: 2.5,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
     autoplay: true,
+    pauseOnHover: false,
   };
 
   const slideItems = [
@@ -26,7 +29,7 @@ export const PersonalizedServices = () => {
       <S.Icons>
         <Slider {...settings} className="slider-container">
           {slideItems.map((item) => (
-            <Image key={item} src={item} alt="personalized-slide" className="slide-item" />
+            <Image key={item} src={item} className="slide-item" />
           ))}
         </Slider>
         <PhoneInterfacePersonalized className="mobile-app" />

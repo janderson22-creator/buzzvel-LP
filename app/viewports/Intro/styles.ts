@@ -55,7 +55,7 @@ export const Infos = styled.div`
   }
 
   ${mqMobile} {
-    padding: 0 1rem;
+    padding: 0;
     width: unset;
   }
 `;
@@ -68,6 +68,7 @@ export const Comment = styled.div`
 
   ${mqMobile} {
     margin-top: 4rem;
+    padding: 0 1rem;
   }
 
   ${mqTablet} {

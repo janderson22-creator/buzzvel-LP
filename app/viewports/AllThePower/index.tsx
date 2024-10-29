@@ -1,8 +1,12 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Button } from '../../components/Button';
 import { Image } from '../../components/Image';
 import { Text } from '../../components/Text';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import { allThePower } from '../../data';
+import { purpleBallPulsing } from './animation';
 import * as S from './styles';
 
 export const AllThePower = () => (
@@ -15,8 +19,8 @@ export const AllThePower = () => (
         <Text className="text-detail">{allThePower.description}</Text>
       </S.ButtonGroup>
     </S.Header>
-    <div className="purple-ball" />
+    <motion.div animate="animate" className="purple-ball" variants={purpleBallPulsing} />
 
-    <Image src="icons/computer.svg" className="computer-image" alt="computer" />
+    <Image src="icons/computer.svg" className="computer-image" />
   </S.Container>
 );

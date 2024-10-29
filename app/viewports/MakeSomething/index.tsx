@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '../../components/Button';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import { makeSomething } from '../../data';

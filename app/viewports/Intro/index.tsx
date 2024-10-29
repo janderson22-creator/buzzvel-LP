@@ -29,7 +29,7 @@ export const Intro = () => {
               {intro.message}
             </Text>
             <S.Profile>
-              <Image src="/woman-profile.webp" className="user-image" alt="employee-working" />
+              <Image src="/woman-profile.webp" className="user-image" />
               <S.UserInfos>
                 <Text tag="span">{intro.name}</Text>
                 <Text tag="span" className="link">
@@ -40,7 +40,7 @@ export const Intro = () => {
           </S.Comment>
         </AnimatedBlock>
       </S.Infos>
-      <Image src="/employee.webp" className="employee-image" alt="employee-working" />
+      <Image src="/employee.webp" className="employee-image" alt={intro.altEmployeeImage} />
     </S.Container>
   );
 };

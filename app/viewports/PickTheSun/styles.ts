@@ -104,10 +104,6 @@ export const Images = styled.div`
   }
 `;
 
-// export const Desktop = styled.div`
-//   position: relative;
-// `;
-
 export const Infos = styled.div`
   padding: 0 15rem;
   z-index: 2;

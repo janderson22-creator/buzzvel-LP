@@ -7,7 +7,7 @@ export const Footer = () => (
   <S.Container>
     <S.CompanyInfo>
       <S.LogoWrapper>
-        <Image src="icons/logo.svg" className="logo" alt="logo" />
+        <Image src="icons/logo.svg" className="logo" />
         <S.CompanyName>{footer.companyName}</S.CompanyName>
       </S.LogoWrapper>
       <Text>{footer.rightsReserved}</Text>

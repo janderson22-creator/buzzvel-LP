@@ -4,8 +4,8 @@ export const sunPulsing: Variants = {
   animate: {
     scale: [1, 1.1, 1],
     backgroundColor: ['#ffcc00', '#ff9900', '#ffcc00'],
-    x: [0, 20, 0],
-    y: [0, 20, 0],
+    x: [10, 10, 10],
+    y: [10, 10, 10],
     rotate: [0, 10, -10, 0],
     boxShadow: [
       '0 0 0 rgba(255, 204, 0, 0)',
@@ -14,7 +14,7 @@ export const sunPulsing: Variants = {
       '0 0 0 rgba(255, 204, 0, 0)',
     ],
     transition: {
-      duration: 2,
+      duration: 5,
       ease: 'easeInOut',
       repeat: Infinity,
     },

@@ -16,6 +16,7 @@ export const GlobalStyle = styled.createGlobalStyle`
     --color-2: #fcd34d;
     --color-3: #78350f;
     --color-4: #d97706;
+    --color-5: #00000040;
     --bg-0: #f59e0b;
     --bg-1: #7e22ce;
     --bg-2: #a252ee;

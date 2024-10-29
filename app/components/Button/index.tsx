@@ -31,7 +31,7 @@ const ButtonContain = styled.button<{ $variant: 'primary' | 'secondary' }>`
   &:hover {
     background-color: ${({ $variant }) => theme[$variant].color};
     border: 0.125rem solid transparent;
-    box-shadow: 0 0.2rem 0.2rem 0 var(--txt-0);
+    box-shadow: 0 0.2rem 0.2rem 0 var(--color-5);
     color: ${({ $variant }) => theme[$variant].hoverTextColor};
   }
 `;

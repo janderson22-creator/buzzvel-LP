@@ -36,7 +36,7 @@ const HeaderNav = () => (
 
 const SupportSection = () => (
   <S.Support>
-    <Image src="icons/headset.svg" className="headset" alt="support" />
+    <Image src="icons/headset.svg" className="headset" />
     <S.SupportNumber>
       <a href="tel:+555818282">{header.supportNumber}</a>
     </S.SupportNumber>

@@ -37,9 +37,10 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
 
   .title {
     color: ${({ $topicColor }) => ($topicColor === 'yellow' ? 'var(--txt-2)' : 'var(--txt-0)')};
-    font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '3.5rem' : '4.5rem')};
+    font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '3.5rem' : '4rem')};
     font-weight: 800;
     margin: 0.5rem 0 1.3rem;
+    max-width: ${({ $titleSize }) => $titleSize === 'large' && '38rem'};
 
     ${mqTabletAndMobile} {
       font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '2rem' : '2.5rem')};

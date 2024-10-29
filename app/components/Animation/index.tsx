@@ -6,7 +6,7 @@ const fadeInUp: Variants = {
     y: 300,
   },
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'linear' } },
 };
 
 type AnimatedBlockProps = {

@@ -45,6 +45,7 @@ const Container = styled.div`
 const Card = styled.div`
   background: var(--txt-2);
   border-radius: 0.6rem;
+  cursor: grab;
   margin-left: 1.5rem;
   max-width: 21rem;
   min-width: 21rem;
@@ -141,7 +142,7 @@ const ArrowWrapper = styled.div`
 
 const Arrow = ({ side, className, onClick }: ArrowProps) => (
   <ArrowWrapper className={`${className} ${side}`} onClick={onClick}>
-    <Image src={`icons/arrow-${side}.svg`} alt={`arrow-${side}`} className="arrow" />
+    <Image src={`icons/arrow-${side}.svg`} className="arrow" />
   </ArrowWrapper>
 );
 
@@ -179,7 +180,7 @@ export const SliderContain = () => (
           </Text>
 
           <UserInfo>
-            <Image src={image} alt={name} className="profile-image" />
+            <Image src={image} className="profile-image" />
             <div className="user-details">
               <Text className="user-name">{name}</Text>
               <Text className="kwh">{kwh}KWh</Text>
