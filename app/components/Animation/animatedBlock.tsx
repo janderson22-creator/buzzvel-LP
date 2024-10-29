@@ -14,10 +14,8 @@ type AnimatedBlockProps = {
   children: ReactNode;
 };
 
-const AnimatedBlock = ({ isVisible, children }: AnimatedBlockProps) => (
+export const AnimatedBlock = ({ isVisible, children }: AnimatedBlockProps) => (
   <motion.div initial="hidden" animate={isVisible ? 'visible' : 'hidden'} variants={fadeInUp}>
     {children}
   </motion.div>
 );
-
-export default AnimatedBlock;

@@ -4,6 +4,7 @@ import { PhoneInterfacePowerful } from '../../components/AnimatedIcons/PhoneInte
 import { Image } from '../../components/Image';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import { personalizedServices } from '../../data';
+import { ovalBgPulsing } from '../../utils/animations';
 import * as S from './styles';
 
 export const PowerfulFeatures = () => {
@@ -40,24 +41,13 @@ export const PowerfulFeatures = () => {
         </Slider>
         <PhoneInterfacePowerful className="mobile-app" />
 
-        <motion.div
-          initial={{ scale: 1, y: 0 }}
-          animate={{
-            scale: [1, 1.05, 1],
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatType: 'mirror',
-          }}
-        >
-          <Image
-            src="icons/bg-powerful.svg"
-            className="mobile-background"
-            alt="mobile-background"
-          />
-        </motion.div>
+        <motion.img
+          src="icons/bg-powerful.svg"
+          className="mobile-background"
+          alt="mobile-background"
+          variants={ovalBgPulsing}
+          animate="animate"
+        />
       </S.Icons>
     </S.Container>
   );

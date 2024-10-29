@@ -1,6 +1,6 @@
 import { Button } from '../../components/Button';
 import { Image } from '../../components/Image';
-import Text from '../../components/Text';
+import { Text } from '../../components/Text';
 import * as S from './styles';
 
 const scrollToSection = (id: string) => {

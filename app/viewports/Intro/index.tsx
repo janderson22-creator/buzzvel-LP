@@ -2,11 +2,11 @@
 
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { AnimatedBlock } from '../../components/Animation/animatedBlock';
 import { Button } from '../../components/Button';
 import { Image } from '../../components/Image';
-import Text from '../../components/Text';
+import { Text } from '../../components/Text';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import AnimatedBlock from '../../components/ViewportMainInfo/animatedBlock';
 import * as S from './styles';
 
 export const Intro = () => {

@@ -2,10 +2,10 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styled from 'styled-components';
 import { mqTabletAndMobile } from '../../global-style';
+import { AnimatedBlock } from '../Animation/animatedBlock';
 import { Description } from '../Description';
-import Text from '../Text';
+import { Text } from '../Text';
 import { Title } from '../Title';
-import AnimatedBlock from './animatedBlock';
 
 const Infos = styled.div`
   display: flex;

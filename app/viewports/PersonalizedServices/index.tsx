@@ -4,6 +4,7 @@ import { PhoneInterfacePersonalized } from '../../components/AnimatedIcons/Phone
 import { Image } from '../../components/Image';
 import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
 import { powerfulFeatures } from '../../data';
+import { ovalBgPulsing } from '../../utils/animations';
 import * as S from './styles';
 
 export const PersonalizedServices = () => {
@@ -29,20 +30,13 @@ export const PersonalizedServices = () => {
           ))}
         </Slider>
         <PhoneInterfacePersonalized className="mobile-app" />
-        <motion.div
-          initial={{ scale: 1, y: 0 }}
-          animate={{
-            scale: [1, 1.05, 1],
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatType: 'mirror',
-          }}
-        >
-          <Image src="icons/bg-personalized.svg" className="mobile-background" alt="background" />
-        </motion.div>
+        <motion.img
+          src="icons/bg-personalized.svg"
+          className="mobile-background"
+          alt="background"
+          variants={ovalBgPulsing}
+          animate="animate"
+        />
       </S.Icons>
 
       <S.Infos>

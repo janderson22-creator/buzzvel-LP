@@ -2,7 +2,7 @@ import { MouseEventHandler } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import { Image } from '../../components/Image';
-import Text from '../../components/Text';
+import { Text } from '../../components/Text';
 import { testimonials } from '../../data';
 import { mqTabletAndMobile } from '../../global-style';
 
