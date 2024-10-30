@@ -1,5 +1,6 @@
 import { Text } from '@/components/Text';
 import { mqTabletAndMobile } from '@/global-style';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Container = styled.footer`
@@ -59,7 +60,9 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   padding: 0.8rem 0.6rem;
+`;
 
+export const LinkItem = styled(Link)`
   &:hover {
     text-decoration: underline;
   }

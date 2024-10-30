@@ -12,7 +12,7 @@ const HeaderNav = () => (
       <S.NavList>
         {header.navItems.map((item) => (
           <S.NavItem key={item}>
-            <Link href={`#${item.toLowerCase()}`}>{item}</Link>
+            <S.LinkItem href={`#${item.toLowerCase()}`}>{item}</S.LinkItem>
           </S.NavItem>
         ))}
       </S.NavList>

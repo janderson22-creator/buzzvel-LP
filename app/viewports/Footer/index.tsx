@@ -1,7 +1,6 @@
 import { Image } from '@/components/Image';
 import { Text } from '@/components/Text';
 import { footer } from '@/data';
-import Link from 'next/link';
 import * as S from './styles';
 
 export const Footer = () => (
@@ -18,7 +17,7 @@ export const Footer = () => (
         <S.NavList>
           {footer.navItems.map((item) => (
             <S.NavItem key={item}>
-              <Link href={`#${item.toLowerCase()}`}>{item}</Link>
+              <S.LinkItem href={`#${item.toLowerCase()}`}>{item}</S.LinkItem>
             </S.NavItem>
           ))}
         </S.NavList>

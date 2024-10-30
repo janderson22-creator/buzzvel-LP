@@ -1,4 +1,5 @@
 import { mqTabletAndMobile } from '@/global-style';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const ContainHeader = styled.header`
@@ -38,30 +39,30 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   padding: 0.8rem 0.6rem;
+`;
 
-  a {
-    color: black;
-    position: relative;
-    text-decoration: none;
-    transition: color 0.3s ease;
+export const LinkItem = styled(Link)`
+  color: black;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
 
-    &::after {
-      background-color: var(--color-2);
-      bottom: 0;
-      content: '';
-      height: 0.1rem;
-      left: 0;
-      position: absolute;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
-      width: 100%;
-    }
+  &::after {
+    background-color: var(--color-2);
+    bottom: 0;
+    content: '';
+    height: 0.1rem;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
 
-    &:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 `;
 

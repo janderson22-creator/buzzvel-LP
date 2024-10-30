@@ -50,6 +50,7 @@ export const Icons = styled.div`
     }
 
     .slide-item {
+      cursor: grab;
       height: 6rem;
       width: 6rem;
 
