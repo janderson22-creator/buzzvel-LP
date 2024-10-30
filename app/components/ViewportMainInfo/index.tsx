@@ -1,11 +1,11 @@
+import { AnimatedBlock } from '@/components/AnimatedBlock';
+import { Description } from '@/components/Description';
+import { Text } from '@/components/Text';
+import { Title } from '@/components/Title';
+import { mqTabletAndMobile } from '@/global-style';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styled from 'styled-components';
-import { mqTabletAndMobile } from '../../global-style';
-import { AnimatedBlock } from '../Animation';
-import { Description } from '../Description';
-import { Text } from '../Text';
-import { Title } from '../Title';
 
 const Infos = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Infos = styled.div`
   }
 `;
 
-const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems: string }>`
+const Header = styled.div<{ $titleLevel: string; $topicColor: string; $alignItems: string }>`
   align-items: ${({ $alignItems }) => $alignItems};
   display: flex;
   flex-direction: column;
@@ -37,13 +37,13 @@ const Header = styled.div<{ $titleSize: string; $topicColor: string; $alignItems
 
   .title {
     color: ${({ $topicColor }) => ($topicColor === 'yellow' ? 'var(--txt-2)' : 'var(--txt-0)')};
-    font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '3.5rem' : '4rem')};
+    font-size: ${({ $titleLevel }) => ($titleLevel === 'h2' ? '3.5rem' : '4rem')};
     font-weight: 800;
     margin: 0.5rem 0 1.3rem;
-    max-width: ${({ $titleSize }) => $titleSize === 'large' && '38rem'};
+    max-width: ${({ $titleLevel }) => $titleLevel === 'h1' && '38rem'};
 
     ${mqTabletAndMobile} {
-      font-size: ${({ $titleSize }) => ($titleSize === 'small' ? '2rem' : '2.5rem')};
+      font-size: ${({ $titleLevel }) => ($titleLevel === 'h2' ? '2rem' : '2.5rem')};
       font-weight: 700;
       text-align: center;
     }
@@ -98,7 +98,7 @@ type Props = {
   description?: string;
   data?: { title: string; subtitle: string }[];
   alignItems?: 'center' | 'left';
-  titleSize?: 'small' | 'large';
+  titleLevel?: 'h1' | 'h2';
 };
 
 export const ViewPortMainInfo = ({
@@ -108,21 +108,23 @@ export const ViewPortMainInfo = ({
   description,
   data,
   alignItems = 'left',
-  titleSize = 'small',
+  titleLevel = 'h2',
 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
     <Infos ref={ref}>
-      <Header $titleSize={titleSize} $topicColor={topicColor} $alignItems={alignItems}>
+      <Header $titleLevel={titleLevel} $topicColor={topicColor} $alignItems={alignItems}>
         {topic && (
           <AnimatedBlock isVisible={isInView}>
             <Text className="topic">{topic}</Text>
           </AnimatedBlock>
         )}
         <AnimatedBlock isVisible={isInView}>
-          <Title className="title">{title}</Title>
+          <Title titleLevel={titleLevel} className="title">
+            {title}
+          </Title>
         </AnimatedBlock>
 
         {description && (

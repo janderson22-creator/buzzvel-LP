@@ -1,10 +1,10 @@
+import { AllThePower } from '@/viewports/AllThePower';
+import { Intro } from '@/viewports/Intro';
+import { MakeSomething } from '@/viewports/MakeSomething';
+import { PersonalizedServices } from '@/viewports/PersonalizedServices';
+import { PickTheSun } from '@/viewports/PickTheSun';
+import { PowerfulFeatures } from '@/viewports/PowerfulFeatures';
 import type { Metadata } from 'next';
-import { AllThePower } from './viewports/AllThePower';
-import { Intro } from './viewports/Intro';
-import { MakeSomething } from './viewports/MakeSomething';
-import { PersonalizedServices } from './viewports/PersonalizedServices';
-import { PickTheSun } from './viewports/PickTheSun';
-import { PowerfulFeatures } from './viewports/PowerfulFeatures';
 
 export const metadata: Metadata = {
   title: 'Soller',

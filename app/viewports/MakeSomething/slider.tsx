@@ -1,10 +1,10 @@
+import { Image } from '@/components/Image';
+import { Text } from '@/components/Text';
+import { makeSomething } from '@/data/makeSomething';
+import { mqTabletAndMobile } from '@/global-style';
 import { MouseEventHandler } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
-import { Image } from '../../components/Image';
-import { Text } from '../../components/Text';
-import { makeSomething } from '../../data/makeSomething';
-import { mqTabletAndMobile } from '../../global-style';
 
 const Container = styled.div`
   padding-left: 3rem;

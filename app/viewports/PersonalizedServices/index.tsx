@@ -1,11 +1,11 @@
 'use client';
 
+import { Image } from '@/components/Image';
+import { ViewPortMainInfo } from '@/components/ViewportMainInfo';
+import { PhoneInterfacePersonalized } from '@/components/animatedIcons/PhoneInterfacePersonalized';
+import { personalizedServices } from '@/data';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-import { Image } from '../../components/Image';
-import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { PhoneInterfacePersonalized } from '../../components/animatedIcons/PhoneInterfacePersonalized';
-import { personalizedServices } from '../../data';
 import { ovalBgPulsing } from './animations';
 import * as S from './styles';
 

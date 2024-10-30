@@ -1,6 +1,6 @@
+import { Text } from '@/components/Text';
+import { mqTabletAndMobile } from '@/global-style';
 import styled from 'styled-components';
-import { Text } from '../../components/Text';
-import { mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.footer`
   align-items: center;

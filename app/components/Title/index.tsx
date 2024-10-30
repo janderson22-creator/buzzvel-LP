@@ -1,7 +1,7 @@
 'use client';
 
+import { mqMobile } from '@/global-style';
 import styled from 'styled-components';
-import { mqMobile } from '../../global-style';
 
 const Txt = styled.h1`
   color: var(txt-0);
@@ -17,8 +17,11 @@ type Props = {
   plainText?: string;
   children?: React.ReactNode;
   className?: string;
+  titleLevel: 'h1' | 'h2';
 };
 
-export const Title = ({ plainText, children, className }: Props) => (
-  <Txt className={className}>{children || plainText}</Txt>
+export const Title = ({ plainText, children, className, titleLevel }: Props) => (
+  <Txt as={titleLevel} className={className}>
+    {children || plainText}
+  </Txt>
 );

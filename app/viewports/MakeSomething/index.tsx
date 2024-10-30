@@ -1,8 +1,8 @@
 'use client';
 
-import { Button } from '../../components/Button';
-import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { makeSomething } from '../../data';
+import { Button } from '@/components/Button';
+import { ViewPortMainInfo } from '@/components/ViewportMainInfo';
+import { makeSomething } from '@/data';
 import { SliderContain } from './slider';
 import * as S from './styles';
 

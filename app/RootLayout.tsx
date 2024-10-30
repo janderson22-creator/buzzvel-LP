@@ -1,14 +1,14 @@
 'use client';
 
+import { GlobalStyle } from '@/global-style';
+import { Footer } from '@/viewports/Footer';
+import { Header } from '@/viewports/Header';
 import { Roboto } from 'next/font/google';
 import { useServerInsertedHTML } from 'next/navigation';
 import { useState } from 'react';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import styled, { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { GlobalStyle } from './global-style';
-import { Footer } from './viewports/Footer';
-import { Header } from './viewports/Header';
 
 const StyleSSR = ({ children }: { children: any }) => {
   const [styleSheet] = useState(() => new ServerStyleSheet());

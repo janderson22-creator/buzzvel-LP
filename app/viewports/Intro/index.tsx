@@ -1,13 +1,13 @@
 'use client';
 
+import { AnimatedBlock } from '@/components/AnimatedBlock';
+import { Button } from '@/components/Button';
+import { Image } from '@/components/Image';
+import { Text } from '@/components/Text';
+import { ViewPortMainInfo } from '@/components/ViewportMainInfo';
+import { intro } from '@/data';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { AnimatedBlock } from '../../components/Animation';
-import { Button } from '../../components/Button';
-import { Image } from '../../components/Image';
-import { Text } from '../../components/Text';
-import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { intro } from '../../data';
 import * as S from './styles';
 
 export const Intro = () => {
@@ -17,7 +17,7 @@ export const Intro = () => {
   return (
     <S.Container ref={ref}>
       <S.Infos>
-        <ViewPortMainInfo title={intro.title} description={intro.description} titleSize="large" />
+        <ViewPortMainInfo title={intro.title} description={intro.description} titleLevel="h1" />
 
         <AnimatedBlock isVisible={isInView}>
           <Button variant="primary" />
@@ -40,7 +40,12 @@ export const Intro = () => {
           </S.Comment>
         </AnimatedBlock>
       </S.Infos>
-      <Image src="/employee.webp" className="employee-image" alt={intro.altEmployeeImage} />
+      <Image
+        src="/employee.webp"
+        className="employee-image"
+        alt={intro.altEmployeeImage}
+        priority
+      />
     </S.Container>
   );
 };

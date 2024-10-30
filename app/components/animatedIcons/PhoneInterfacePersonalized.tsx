@@ -45,7 +45,7 @@ export const PhoneInterfacePersonalized = ({ className }: { className: string })
               times: [0, 0.3, 1],
             }}
             style={{
-              filter: 'blur(2px)',
+              filter: 'blur(1px)',
             }}
           />
           <path

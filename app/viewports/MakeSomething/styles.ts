@@ -1,5 +1,5 @@
+import { mqTabletAndMobile } from '@/global-style';
 import styled from 'styled-components';
-import { mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
   background: var(--color-1);

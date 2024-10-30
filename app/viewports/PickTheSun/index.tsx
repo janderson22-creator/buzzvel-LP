@@ -1,9 +1,9 @@
 'use client';
 
+import { Image } from '@/components/Image';
+import { ViewPortMainInfo } from '@/components/ViewportMainInfo';
+import { pickTheSun } from '@/data';
 import { motion } from 'framer-motion';
-import { Image } from '../../components/Image';
-import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { pickTheSun } from '../../data';
 import { sunPulsing, purpleBallPulsing } from './animations';
 import * as S from './styles';
 

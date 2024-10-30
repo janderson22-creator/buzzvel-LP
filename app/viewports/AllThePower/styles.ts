@@ -1,5 +1,5 @@
+import { mqMobile, mqTablet, mqTabletAndMobile } from '@/global-style';
 import styled from 'styled-components';
-import { mqMobile, mqTablet, mqTabletAndMobile } from '../../global-style';
 
 export const Container = styled.div`
   align-items: center;

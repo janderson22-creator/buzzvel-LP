@@ -1,11 +1,11 @@
 'use client';
 
+import { Button } from '@/components/Button';
+import { Image } from '@/components/Image';
+import { Text } from '@/components/Text';
+import { ViewPortMainInfo } from '@/components/ViewportMainInfo';
+import { allThePower } from '@/data';
 import { motion } from 'framer-motion';
-import { Button } from '../../components/Button';
-import { Image } from '../../components/Image';
-import { Text } from '../../components/Text';
-import { ViewPortMainInfo } from '../../components/ViewportMainInfo';
-import { allThePower } from '../../data';
 import { purpleBallPulsing } from './animation';
 import * as S from './styles';
 
